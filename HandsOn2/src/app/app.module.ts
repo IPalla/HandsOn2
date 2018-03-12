@@ -8,6 +8,7 @@ import { AboutModule } from './about/about.module';
 import { FormsModule } from '@angular/forms';
 import { CoreModule } from './core/core.module';
 import { BlogModule } from './blog/blog.module';
+import { EstacionesModule } from './estaciones/estaciones.module';
 
 
 @NgModule({
@@ -20,7 +21,8 @@ import { BlogModule } from './blog/blog.module';
     AppRoutingModule,
     CoreModule,
     AboutModule,
-    BlogModule
+    BlogModule,
+    EstacionesModule
   ],
   providers: [],
   bootstrap: [AppComponent]
