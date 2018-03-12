@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { AboutModule } from './about/about.module';
 import { FormsModule } from '@angular/forms';
 import { CoreModule } from './core/core.module';
+import { BlogModule } from './blog/blog.module';
 
 
 @NgModule({
@@ -18,7 +19,8 @@ import { CoreModule } from './core/core.module';
     FormsModule,
     AppRoutingModule,
     CoreModule,
-    AboutModule
+    AboutModule,
+    BlogModule
   ],
   providers: [],
   bootstrap: [AppComponent]

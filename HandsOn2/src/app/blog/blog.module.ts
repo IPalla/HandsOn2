@@ -13,6 +13,6 @@ import { DetallesComponent } from './detalles/detalles.component';
     BlogRoutingModule
   ],
   declarations: [BlogComponent, ListaComponent, CrearComponent, DetallesComponent],
-  exports: []
+  exports: [BlogComponent]
 })
 export class BlogModule { }
