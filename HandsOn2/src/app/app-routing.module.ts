@@ -8,14 +8,13 @@ import { EstacionesComponent } from './estaciones/estaciones.component';
 
 const routes: Routes = [
 
-  /* { path: 'about', loadChildren: './about/about.module#AboutModule' },
+  { path: 'about', loadChildren: './about/about.module#AboutModule' },
   { path: 'blog', loadChildren: './blog/blog.module#BlogModule' },
   { path: 'estaciones', loadChildren: './estaciones/estaciones.module#EstacionesModule' },
-  { path: '', pathMatch: 'full', redirectTo: 'about' }, */
+  { path: '', pathMatch: 'full', redirectTo: 'about' },
+  /* { path: 'estaciones', component: EstacionesComponent},
   { path: 'about', component: AboutComponent},
-  { path: 'blog', component: BlogComponent },
-/*   { path: 'estaciones', loadChildren: './estaciones/estaciones.module#EstacionesModule' }, */
-  { path: 'estaciones', component: EstacionesComponent},
+  { path: 'blog', component: BlogComponent }, */
   { path: '', pathMatch: 'full', redirectTo: 'about' },
 ];
 
