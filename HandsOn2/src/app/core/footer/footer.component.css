@@ -1,0 +1,10 @@
+.content { 
+    bottom: 0px;
+    height: auto; /* valor que necesites */
+    width: 100%;
+    text-align: center;
+    padding-top: 5%;
+}
+    .content p{
+        display: inline-block;
+    }
