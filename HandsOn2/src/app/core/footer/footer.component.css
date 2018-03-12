@@ -8,3 +8,7 @@
     .content p{
         display: inline-block;
     }
+    .content img{
+        width: 12%;
+        height: 12%;
+    }
