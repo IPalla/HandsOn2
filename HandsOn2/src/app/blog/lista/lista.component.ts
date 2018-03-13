@@ -7,14 +7,30 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class ListaComponent implements OnInit {
 
-  @Input() aEntradas: Array<any>;
+  @Input() oEntrada: any;
+  shown: boolean;
+  content: string;
+  arrowClass: string;
+  title: string;
+  author: string;
   constructor() { }
 
   ngOnInit() {
-    console.log(this.aEntradas);
+    this.shown = false;
+    this.content = '';
+    this.arrowClass = 'fa fa-sort-down';
+    this.title = this.oEntrada.titulo;
+    this.author = this.oEntrada.nombre;
+    console.log(this.oEntrada);
   }
-  muestra() {
-    console.log(this.aEntradas);
+  setContent() {
+    this.shown = !this.shown;
+    (this.shown) ? this.content = this.oEntrada.descripcion : this.content = '';
+    (this.shown) ? this.arrowClass = 'fa fa-sort-up' : this.arrowClass = 'fa fa-sort-down';
+
+  }
+  fadeContent() {
+    console.log(this.oEntrada.descripcion);
   }
 
 }

@@ -12,12 +12,17 @@ import { EntradaBlog } from '../modelos/entradas';
            <div class="card-header">
              <h1> Entradas de Blog </h1>
            </div>
-           <div class="card-body">
+          <div class="card-body">
+          <ul>
+            <li *ngFor="let item of aEntradas; index as i;">
+              <app-lista [oEntrada]="item"></app-lista>
+            </li>
+          </ul>
+        </div>
+           <div class="card-footer">
               <app-crear></app-crear>
            </div>
-           <div class="card-body">
-              <app-lista [aEntradas]="aEntradas"></app-lista>
-           </div>
+
          </div>
      </div>
  </div>

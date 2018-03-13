@@ -1,3 +1,13 @@
 /* You can add global styles to this file, and also import other style files */
 @import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 @import "../node_modules/font-awesome/css/font-awesome.min.css";
+
+*,
+*::before, *::after, *:before, *:after{
+    box-sizing: border-box;
+}
+ ul{
+     margin: 0;
+     padding: 0;
+     list-style: none;
+}
