@@ -11,7 +11,10 @@ import { Component, OnInit } from '@angular/core';
              <h1> Entradas de Blog </h1>
            </div>
            <div class="card-body">
-            <app-crear></app-crear>
+              <app-crear></app-crear>
+           </div>
+           <div class="card-body">
+              <app-lista></app-lista>
            </div>
          </div>
      </div>

@@ -1,0 +1,84 @@
+*{
+    background-color: gainsboro;
+    white-space: nowrap;
+  }
+ul{
+  text-align: center;
+}
+nav img{
+  width:100px;
+}
+h1 {
+  color: gray;
+}
+.navbar-dark .navbar-nav .nav-link {
+  color: gray;
+  font-size: 32px;
+}
+.navbar-dark .navbar-nav .nav-link:hover {
+  color: rgb(65, 59, 59);
+  font-size: 36px;
+}
+.oculto2{
+  display: none; /*Oculto 2 es para todos los tamaños a diferencia de oculto*/
+}
+@media only screen and (min-width: 1090px){
+  ul{
+    padding-left: 20%;
+  }
+}
+@media only screen and (min-width: 950px){
+  ul{
+    padding-left: 10%;
+  }
+}
+@media only screen and (max-width: 1225px){
+  .content
+  {
+      min-height: 90%;
+      min-height: -webkit-calc(100% - 200px);
+      min-height: -moz-calc(100% - 200px);
+      min-height: calc(100% - 200px);
+  }
+}
+@media only screen and (max-width: 1225px){
+  .content
+  {
+      min-height: 80%;
+      min-height: -webkit-calc(100% - 175px);
+      min-height: -moz-calc(100% - 175px);
+      min-height: calc(100% - 175px);
+  }
+}
+@media only screen and (max-width: 860px){
+  h1{
+    display: none;
+  }
+}
+@media only screen and (max-width: 700px){
+  nav img{
+   width: 100px;
+  }
+  .container .card-header{
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 600px){
+  nav img{
+    display: none;
+  }
+}
+@media only screen and (max-width: 575px){
+
+  .oculto{
+    display: none;
+  }
+  ul{
+    width: 100%;
+    align-content: center;
+  }
+  nav {
+    align-content: center;
+  }
+}
