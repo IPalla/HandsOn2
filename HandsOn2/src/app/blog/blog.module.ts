@@ -6,13 +6,22 @@ import { BlogComponent } from './blog.component';
 import { ListaComponent } from './lista/lista.component';
 import { CrearComponent } from './crear/crear.component';
 import { DetallesComponent } from './detalles/detalles.component';
+import { FormsModule } from '@angular/forms';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   imports: [
     CommonModule,
-    BlogRoutingModule
+    FormsModule,
+    BlogRoutingModule,
+    HttpClientModule
   ],
-  declarations: [BlogComponent, ListaComponent, CrearComponent, DetallesComponent],
+  declarations: [
+    BlogComponent,
+    ListaComponent,
+    CrearComponent,
+    DetallesComponent
+  ],
   exports: [BlogComponent]
 })
 export class BlogModule { }

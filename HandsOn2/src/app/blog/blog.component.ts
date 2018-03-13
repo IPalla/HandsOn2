@@ -4,7 +4,7 @@ import { Component, OnInit } from '@angular/core';
   selector: 'app-blog',
   template: `
     <p>
-      blog works!
+      <app-crear></app-crear>
     </p>
   `,
   styles: []
