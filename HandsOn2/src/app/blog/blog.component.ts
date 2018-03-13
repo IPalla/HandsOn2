@@ -11,7 +11,7 @@ import { EntradaBlog } from '../modelos/entradas';
          <div class="card">
            <div class="card-header">
              <h1> Entradas de Blog </h1>
-           </div>          
+           </div>
           <div class="card-body">
           <ul>
             <li *ngFor="let item of aEntradas; index as i;">

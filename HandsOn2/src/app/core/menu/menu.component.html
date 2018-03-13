@@ -18,12 +18,12 @@
           </button>
       </li>
     <li class="nav-item">
-      <a class="nav-link" routerLinkActive="active" routerLink="estaciones">Estaciones <i class="fa fa-snowflake"></i></a>
-      <ul>
-          <li><a class="nav-link" routerLinkActive="active" routerLink="estaciones">Puerto de Navacerrada</a></li>
-          <li><a class="nav-link" routerLinkActive="active" routerLink="estaciones">Sierra de Béjar</a></li>
-          <li><a class="nav-link" routerLinkActive="active" routerLink="estaciones">Valdesquí</a></li>
-          <li><a class="nav-link" routerLinkActive="active" routerLink="estaciones">La Pinilla</a></li>
+      <a class="nav-link" routerLinkActive="active" routerLink="estaciones" (click)="botonSubMenu()">Estaciones <i [className]="this.arrowClass"></i></a>
+      <ul [ngClass]="claseSubmenu" id="sub-menu">
+          <li><a class="nav-link" routerLinkActive="active" routerLink="puerto-navacerrada">Puerto de Navacerrada</a></li>
+          <li><a class="nav-link" routerLinkActive="active" routerLink="sierra-bejar">Sierra de Béjar</a></li>
+          <li><a class="nav-link" routerLinkActive="active" routerLink="valdesqui">Valdesquí</a></li>
+          <li><a class="nav-link" routerLinkActive="active" routerLink="la-pinilla">La Pinilla</a></li>
       </ul>
     </li>
     <li class="nav-item">

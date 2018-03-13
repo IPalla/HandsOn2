@@ -9,12 +9,20 @@
       "descripcion": "Este es el contenido del blog que vamos a escribir aaaao lorem"
     },
     {
-      "nombre": "Mauricio",
-      "correo": "mauri@babel.es",
-      "telefono": "666777888",
-      "titulo": "Prueba entrada",
-      "descripcion": "Esto es una entrada ",
-      "id": 2
+      "id": 2,
+      "nombre": "df",
+      "correo": "a@dfhma.com",
+      "telefono": "5223232",
+      "titulo": "jsaerver",
+      "descripcion": "Este esadf 222a escribir aaaao lorem"
+    },
+    {
+      "nombre": "Holaqueta",
+      "correo": "nacho@gmail.com",
+      "telefono": "123456789",
+      "titulo": "Prueba",
+      "descripcion": "Esto es una entrada de prueba",
+      "id": 3
     }
   ]
 }

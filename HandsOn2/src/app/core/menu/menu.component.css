@@ -4,9 +4,15 @@
   }
 ul{
   text-align: center;
+
 }
 nav img{
   width:100px;
+  /*  border-radius: 200px 200px 200px 200px;
+  -moz-border-radius: 200px 200px 200px 200px;
+  -webkit-border-radius: 200px 200px 200px 200px;
+  border: 0px solid #000000; */
+
 }
 h1 {
   color: gray;
@@ -23,19 +29,23 @@ h1 {
   display: none; /*Oculto 2 es para todos los tamaños a diferencia de oculto*/
 }
 
-/*
-LISTA ESTACIONES
-*/
+/*LISTA ESTACIONES*/
 
-nav li ul{
-  display: none;
+nav ul li ul{
   position: absolute;
-  margin-left: 2%;
-  min-width: 140px;
+  padding-left: 0;
 }
-nav li:hover > ul{
+nav ul li:hover{
+  background-color:dodgerblue;
+}
+nav ul li ul li{
+  background-color: rgb(173, 219, 230) ;
+  position: relative;
+  font-size: 25px;
   display: block;
 }
+
+
 @media only screen and (min-width: 1090px){
   ul{
     padding-left: 20%;
