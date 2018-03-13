@@ -27,4 +27,13 @@ export class CrearComponent implements OnInit {
       this.oInputBlog = { id: undefined, nombre: '', correo: '', telefono: '', titulo: '', descripcion: '' };
   }
 
+  private borrarInput() {
+    this.formUser.reset();
+  }
+
+  private enviarInput() {
+    this.outAddBlogItem.emit(this.oInputBlog); /*Envio del objeto entrada al padre */
+    this.borrarInput();
+  }
+
 }

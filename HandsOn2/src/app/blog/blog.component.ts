@@ -13,10 +13,10 @@ import { EntradaBlog } from '../modelos/entradas';
              <h1> Entradas de Blog </h1>
            </div>
            <div class="card-body">
-              <app-crear></app-crear>
-           </div>
-           <div class="card-body">
               <app-lista [aEntradas]="aEntradas"></app-lista>
+           </div>
+           <div class="card-footer">
+              <app-crear (outAddBlogItem)="addEntrada($event)"></app-crear>
            </div>
          </div>
      </div>
@@ -39,8 +39,8 @@ export class BlogComponent implements OnInit {
      );
   }
   // respuesta a los eventos en el componente altas
-  addContacto (oContacto) {
-    this.blogservice.setEntrada(oContacto)
+  addEntrada (oInputBlog) {
+    this.blogservice.setEntrada(oInputBlog)
     .then(
       () => {this.blogservice.getEntradas()
         .then(response =>  this.aEntradas = response);
