@@ -1,4 +1,5 @@
 export interface EntradaBlog {
+    id: number;
     /*Datos user*/
     nombre: string;
     correo: string;

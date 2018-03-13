@@ -11,7 +11,7 @@
           [(ngModel)]="oInputBlog.nombre"
           #nameState="ngModel">
       </div>
-      <!-- <div [hidden]="nameState.valid || nameState.untouched ">
+      <div [hidden]="nameState.valid || nameState.untouched ">
           <div class="error-message"
             [hidden]="!nameState.errors?.required">
             El nombre es obligatorio</div>
@@ -19,19 +19,19 @@
             [hidden] = "!nameState.errors?.minlength">
             El nombre debe tener un mínimo de 3 caracteres
           </div>
-        </div> -->
+        </div> 
 
-      <!-- <div class="form-group row">
+      <div class="form-group row">
           
-          <label for="email"  class="col-3">Correo</label>
+          <label for="correo"  class="col-3">Correo</label>
           <input type="text" class="form-control col-9"
-          id="email" name="email"
-          required pattern="/^[a-z]+[a-z0-9._]+@[a-z]+\.[a-z.]{2,5}$/";
+          id="correo" name="correo"
+          required pattern="^[a-z]+[a-z0-9._]+@[a-z]+\.[a-z.]{2,5}$"
           placeholder="Indica el correo (es obligatorio)"
           [(ngModel)]="oInputBlog.correo"
           #correoState="ngModel">
-      </div>    -->   
-      <!-- <div [hidden]="correoState.valid || correoState.untouched ">
+      </div>     
+      <div [hidden]="correoState.valid || correoState.untouched ">
         <div class="error-message"
           [hidden]="!correoState.errors?.required">
           El correo es obligatorio</div>
@@ -39,9 +39,9 @@
           [hidden] = "!phoneState.errors?.pattern">
           El correo tiene que tener formato xxx@xx.xx
         </div>
-      </div> -->
+      </div>
 
-      <!-- <div class="form-group row">
+      <div class="form-group row">
          
           <label for="telefono" class="col-3">Teléfono</label>
           <input type="text" class="form-control col-9"
@@ -50,8 +50,8 @@
           placeholder="Indica el teléfono (es obligatorio)"
           [(ngModel)]="oInputBlog.telefono"
           #phoneState="ngModel">
-      </div> -->
-      <!--  <div [hidden]="phoneState.valid || phoneState.untouched ">
+      </div>
+      <div [hidden]="phoneState.valid || phoneState.untouched ">
           <div class="error-message"
               [hidden]="!phoneState.errors?.required">
               El teléfono es obligatorio</div>
@@ -59,7 +59,7 @@
               [hidden] = "!phoneState.errors?.pattern">
               El teléfono debe tener 9 digitos
           </div>
-      </div> -->
+      </div>
   </fieldset>  
 
   <!-- <div class="row">

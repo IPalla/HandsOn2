@@ -19,7 +19,12 @@ export class CrearComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.resetInput();
     this.oValidado = {'was-validated': true};
+  }
+
+  private resetInput() {
+      this.oInputBlog = { id: undefined, nombre: '', correo: '', telefono: '', titulo: '', descripcion: '' };
   }
 
 }
