@@ -2,10 +2,11 @@
   <!--Text-->  
   <fieldset>
       <legend>Nueva Entrada</legend>
+     
       <div class="form-group row">
           <!--Etiqueta / Campo "Mombre"-->                        
           <label for="nombre" class="col-3">Nombre Usuario</label>
-          <input type="text" class="form-control col-9"
+          <input type="text" class="form-control col-7"
           name="nombre" id="nombre" required minlength="3"
           placeholder="Indica el nombre (es obligatorio)"
           [(ngModel)]="oInputBlog.nombre"
@@ -24,7 +25,7 @@
       <div class="form-group row">
           
           <label for="correo"  class="col-3">Correo</label>
-          <input type="text" class="form-control col-9"
+          <input type="text" class="form-control col-7"
           id="correo" name="correo"
           required pattern="^[a-z]+[a-z0-9._]+@[a-z]+\.[a-z.]{2,5}$"
           placeholder="Indica el correo (es obligatorio)"
@@ -44,7 +45,7 @@
       <div class="form-group row">
          
           <label for="telefono" class="col-3">Teléfono</label>
-          <input type="text" class="form-control col-9"
+          <input type="text" class="form-control col-7"
           id="telefono" name="telefono"
           required pattern="^\d{9}$"
           placeholder="Indica el teléfono (es obligatorio)"
@@ -60,9 +61,44 @@
               El teléfono debe tener 9 digitos
           </div>
       </div>
+
+
+      <div class="form-group row">
+                               
+        <label for="nombre" class="col-3">Título</label>
+        <input type="text" class="form-control col-7"
+        name="titulo" id="titulo" required maxlength="100"
+        placeholder="Indica el título (es obligatorio)"
+        [(ngModel)]="oInputBlog.titulo"
+        #tituloState="ngModel">
+    </div>
+    <div [hidden]="tituloState.valid || tituloState.untouched ">
+        <div class="error-message"
+          [hidden]="!tituloState.errors?.required">
+          El titulo es obligatorio</div>
+      </div> 
+
+
+      <div class="form-group row">
+         
+        <label for="coments" class="col-3">Descripción</label>
+        <textarea type="text" rows="7" class="form-control col-7"
+        id="coments" name="coments" maxlength="800"
+        required 
+        placeholder="Introduce la información de tu entrada"
+        [(ngModel)]="oInputBlog.descripcion"
+        #comentsState="ngModel">
+        </textarea>
+      </div>
+    <div [hidden]="comentsState.valid || comentsState.untouched ">
+        <div class="error-message"
+            [hidden]="!comentsState.errors?.required">
+            El campo es obligatorio</div>
+    </div>
+
   </fieldset>  
 
-  <!-- <div class="row">
+  <div class="row">
     <div class="col-9 offset-3">
       <button type="submit" class="btn btn-primary mr-2"
       [disabled]="form1.invalid">
@@ -71,6 +107,6 @@
       [disabled]="form1.pristine">
           Borrar</button>
     </div>
-  </div> -->      
+  </div>
 
 </form>
