@@ -8,6 +8,7 @@ import { CrearComponent } from './crear/crear.component';
 import { DetallesComponent } from './detalles/detalles.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { BlogService } from '../../servicios/blog.service';
 
 @NgModule({
   imports: [
@@ -22,6 +23,9 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
     CrearComponent,
     DetallesComponent
   ],
-  exports: [BlogComponent]
+  exports: [BlogComponent],
+  providers: [
+    BlogService
+  ]
 })
 export class BlogModule { }
