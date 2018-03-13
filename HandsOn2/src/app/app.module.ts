@@ -10,7 +10,6 @@ import { CoreModule } from './core/core.module';
 import { BlogModule } from './blog/blog.module';
 import { EstacionesModule } from './estaciones/estaciones.module';
 
-
 @NgModule({
   declarations: [
     AppComponent

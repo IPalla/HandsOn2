@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { BlogService } from '../../servicios/blog.service';
+import { EntradaBlog } from '../modelos/entradas';
 
 @Component({
   selector: 'app-blog',
@@ -14,7 +16,7 @@ import { Component, OnInit } from '@angular/core';
               <app-crear></app-crear>
            </div>
            <div class="card-body">
-              <app-lista></app-lista>
+              <app-lista [aEntradas]="aEntradas"></app-lista>
            </div>
          </div>
      </div>
@@ -25,9 +27,24 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BlogComponent implements OnInit {
 
-  constructor() { }
+  aEntradas: Array<EntradaBlog>;
+  sContacto: string;
+
+  constructor(public blogservice: BlogService) { }
 
   ngOnInit() {
+    this.aEntradas = [];
+    this.blogservice.getEntradas().then(
+       response =>  this.aEntradas = response
+     );
   }
-
+  // respuesta a los eventos en el componente altas
+  addContacto (oContacto) {
+    this.blogservice.setEntrada(oContacto)
+    .then(
+      () => {this.blogservice.getEntradas()
+        .then(response =>  this.aEntradas = response);
+      });
+  }
 }
+
