@@ -1,7 +1,5 @@
 {
   "posts": [
-    { "id": 1, "title": "json-server", "author": "typicode", "content": "Este es el contenido del blog que vamos a escribir aaaao lorem" }
+    { "id": 1,"nombre": "typicode","correo": "a@hma.com", "telefono":"5223232", "titulo": "json-server",  "descripcion": "Este es el contenido del blog que vamos a escribir aaaao lorem" }
   ]
 }
-
-
