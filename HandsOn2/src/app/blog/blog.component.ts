@@ -11,13 +11,18 @@ import { EntradaBlog } from '../modelos/entradas';
          <div class="card">
            <div class="card-header">
              <h1> Entradas de Blog </h1>
-           </div>
-           <div class="card-body">
-              <app-lista [aEntradas]="aEntradas"></app-lista>
-           </div>
-           <div class="card-footer">
-              <app-crear (outAddBlogItem)="addEntrada($event)"></app-crear>
-           </div>
+           </div>          
+          <div class="card-body">
+          <ul>
+            <li *ngFor="let item of aEntradas; index as i;">
+              <app-lista [oEntrada]="item"></app-lista>
+            </li>
+          </ul>
+        </div>
+        <div class="card-footer">
+          <app-crear (outAddBlogItem)="addEntrada($event)"></app-crear>
+        </div>
+
          </div>
      </div>
  </div>
@@ -35,16 +40,17 @@ export class BlogComponent implements OnInit {
   ngOnInit() {
     this.aEntradas = [];
     this.blogservice.getEntradas().then(
-       response =>  this.aEntradas = response
-     );
+      response => this.aEntradas = response
+    );
   }
   // respuesta a los eventos en el componente altas
-  addEntrada (oInputBlog) {
+  addEntrada(oInputBlog) {
     this.blogservice.setEntrada(oInputBlog)
-    .then(
-      () => {this.blogservice.getEntradas()
-        .then(response =>  this.aEntradas = response);
-      });
+      .then(
+        () => {
+          this.blogservice.getEntradas()
+          .then(response => this.aEntradas = response);
+        });
   }
 }
 

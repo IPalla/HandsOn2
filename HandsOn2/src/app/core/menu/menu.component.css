@@ -22,6 +22,20 @@ h1 {
 .oculto2{
   display: none; /*Oculto 2 es para todos los tamaños a diferencia de oculto*/
 }
+
+/*
+LISTA ESTACIONES
+*/
+
+nav li ul{
+  display: none;
+  position: absolute;
+  margin-left: 2%;
+  min-width: 140px;
+}
+nav li:hover > ul{
+  display: block;
+}
 @media only screen and (min-width: 1090px){
   ul{
     padding-left: 20%;
