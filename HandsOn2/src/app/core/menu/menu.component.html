@@ -1,7 +1,30 @@
 
 
-  <nav class="nav justify-content-center|justify-content-end">
-    <a class="nav-link active" routerLinkActive="active" routerLink="about">About</a>
-    <a class="nav-link active" routerLinkActive="active" routerLink="blog">Blog</a>
-    <a class="nav-link active" routerLinkActive="active" routerLink="estaciones">Estaciones</a>
-              </nav>
+
+<nav class="navbar navbar-expand-sm navbar-dark">
+  <a class="navbar-brand" href="#">
+    <img src="./assets/icono_snow.png" alt="logo" class="rounded">
+  </a>
+  <h1>SCentral Stations</h1>
+
+  <button class="navbar-toggler navbar-toggler-right" [ngClass]="claseBoton" type="button" (click)="botonMenu()" >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  <!-- Links -->
+  <ul class="navbar-nav" [ngClass]="claseUl">
+      <li class="nav-item">
+          <button class="navbar-toggler navbar-toggler-right" type="button" (click)="botonMenu()" >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+      </li>
+    <li class="nav-item">
+      <a class="nav-link" routerLinkActive="active" routerLink="estaciones">Estaciones <i class="fa fa-snowflake"></i></a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" routerLinkActive="active" routerLink="blog">Blog <i class="fa fa-rss"></i></a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" routerLinkActive="active" routerLink="about">About <i class="fa fa-question"></i></a>
+    </li>
+  </ul>
+</nav>
