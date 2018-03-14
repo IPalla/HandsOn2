@@ -18,10 +18,10 @@
     <li class="nav-item">
       <a class="nav-link" (click)="botonSubMenu()">Estaciones <i [className]="this.arrowClass" id="btnS"></i></a>
       <ul [ngClass]="claseSubmenu" id="sub-menu">
-          <li><a class="nav-link" routerLinkActive="active" routerLink="estaciones/puerto-navacerrada">Puerto de Navacerrada</a></li>
-          <li><a class="nav-link" routerLinkActive="active" routerLink="estaciones/sierra-bejar">Sierra de Béjar</a></li>
-          <li><a class="nav-link" routerLinkActive="active" routerLink="estaciones/valdesqui">Valdesquí</a></li>
-          <li><a class="nav-link" routerLinkActive="active" routerLink="estaciones/la-pinilla">La Pinilla</a></li>
+          <li><a class="nav-link" (click)="botonSubMenu()" routerLinkActive="active" routerLink="estaciones/puerto-navacerrada">Puerto de Navacerrada</a></li>
+          <li><a class="nav-link" (click)="botonSubMenu()" routerLinkActive="active" routerLink="estaciones/sierra-bejar">Sierra de Béjar</a></li>
+          <li><a class="nav-link" (click)="botonSubMenu()" routerLinkActive="active" routerLink="estaciones/valdesqui">Valdesquí</a></li>
+          <li><a class="nav-link" (click)="botonSubMenu()" routerLinkActive="active" routerLink="estaciones/la-pinilla">La Pinilla</a></li>
       </ul>
     </li>
     <li class="nav-item link-menu">

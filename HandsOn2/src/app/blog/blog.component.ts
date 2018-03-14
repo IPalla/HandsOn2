@@ -10,7 +10,13 @@ import { EntradaBlog } from '../modelos/entradas';
      <div class="col text-center">
          <div class="card">
            <div class="card-header">
-             <h1> Entradas de Blog </h1>
+              <div class="row">
+                <h1 class="col-md-6"> Entradas de Blog </h1>
+                <form class="form-inline col-md-6" action="/action_page.php">
+                <input class="form-control mr-sm-2" type="text" placeholder="Search">
+                <button class="btn btn-success" type="submit">Search</button>
+                </form>
+              </div>
            </div>
           <div class="card-body">
           <ul>
