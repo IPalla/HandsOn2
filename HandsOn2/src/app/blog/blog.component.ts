@@ -5,7 +5,7 @@ import { EntradaBlog } from '../modelos/entradas';
 @Component({
   selector: 'app-blog',
   templateUrl: './blog.component.html',
-  styles: []
+  styleUrls: ['./blog.component.css']
 })
 export class BlogComponent implements OnInit {
 
@@ -13,12 +13,13 @@ export class BlogComponent implements OnInit {
   sContacto: string;
   sFiltrar: string; /*Valor del search*/
   claseError: string;
-
+  counter: number;
   constructor(public blogservice: BlogService) { }
 
   ngOnInit() {
     this.sFiltrar = '';
     this.aEntradas = [];
+    this.claseError = 'oculto';
     this.blogservice.getEntradas().then(
       response => {
         this.aEntradas = response;
@@ -37,18 +38,16 @@ export class BlogComponent implements OnInit {
 
   isEmpty () {
     if (this.sFiltrar.length) {
-      console.log(this.count);
-      this.hola();
+      this.sinResultados();
       return false;
     }
   }
 
-  hola() {
-    if !(!document.getElementById('entradas')) {
+  sinResultados() {
+    console.log(document.getElementById('entradas'));
+    if (!document.getElementById('entradas')) {
       this.claseError = '';
-    }
-
-    else{
+    } else {
       this.claseError = 'oculto';
     }
   }
