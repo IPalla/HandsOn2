@@ -7,11 +7,12 @@ import { SierraBejarComponent } from './sierra-bejar/sierra-bejar.component';
 import { PuertoNavacerradaComponent } from './puerto-navacerrada/puerto-navacerrada.component';
 
 const routes: Routes = [
-  {path: '', component: EstacionesComponent },
-  {path: 'valdesqui', component: ValdesquiComponent },
-  {path: 'la-pinilla', component: LaPinillaComponent },
-  {path: 'sierra-bejar', component: SierraBejarComponent },
-  {path: 'puerto-navacerrada', component: PuertoNavacerradaComponent }
+  {path: 'valdesqui',  component: LaPinillaComponent},
+  {path: 'la-pinilla',   component: LaPinillaComponent},
+  {path: 'sierra-bejar',  component: LaPinillaComponent},
+  {path: 'puerto-navacerrada',  component: LaPinillaComponent },
+  { path: '', pathMatch: 'full', redirectTo: 'puerto-navacerrada' }
+
 ];
 
 @NgModule({
