@@ -15,7 +15,7 @@ const routes: Routes = [
   /* { path: 'estaciones', component: EstacionesComponent},
   { path: 'about', component: AboutComponent},
   { path: 'blog', component: BlogComponent }, */
-  { path: '', pathMatch: 'full', redirectTo: 'about' }
+  { path: '', pathMatch: 'full', redirectTo: 'estaciones/puerto-navacerrada' }
 ];
 
 @NgModule({
