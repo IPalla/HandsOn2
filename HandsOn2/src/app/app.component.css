@@ -28,3 +28,19 @@ html:after {
     min-height: -moz-calc(100% - 186px);
     min-height: calc(100% - 186px); */
 }
+
+.templates {
+  margin-top: 6px;
+  margin-left: 10px;
+  margin-right: 10px;
+  font-family: 'Titillium Web', sans-serif;
+
+  text-align: center;
+  align-content: center;
+   
+  margin-left: auto;
+  margin-right: auto; 
+}
+
+
+
