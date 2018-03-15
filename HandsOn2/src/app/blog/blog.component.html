@@ -39,7 +39,7 @@
                  <!-- <app-editar></app-editar>-->
 
                  <app-crear (outAddBlogItem)="addEntrada($event)" [ngClass]="formClass"></app-crear>
-                 <app-editar (outEditItem)="editEntrada($event)" [oEntrada]="item"></app-editar>
+                 <app-editar (outEditItem)="editEntrada($event)" [oEntrada]="oEditar" [ngClass]="editClass"></app-editar>
                </div>
 
                 </div>

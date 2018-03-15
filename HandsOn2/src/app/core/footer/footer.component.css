@@ -16,13 +16,12 @@
         height: 12%;
     } */
 
-    * {background-color: gainsboro;}
 
     *{
       font-family: 'Courier New', Courier, monospace;
-      font-style: italic;
+      font-style: italic;/*
       border: 1px;
-      background-color: gainsboro;
+      background-color: gainsboro; */
       color: grey;
       align-content: center;
     }

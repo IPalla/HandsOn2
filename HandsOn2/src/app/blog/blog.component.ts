@@ -27,6 +27,7 @@ export class BlogComponent implements OnInit {
     this.sFiltrar = '';
     this.aEntradas = [];
     this.claseError = 'oculto';
+    this.editClass = 'oculto';
     this.blogservice.getEntradas().then(
       response => {
         this.aEntradas = response;
@@ -55,6 +56,7 @@ export class BlogComponent implements OnInit {
         });
   }
   editEntrada(oInputBlog: EntradaBlog) {
+   this.editEntradaAux(oInputBlog);
    this.blogservice.editEntrada(oInputBlog)
       .then(
         () => {
@@ -63,10 +65,15 @@ export class BlogComponent implements OnInit {
         });
   }
   editEntradaAux(oInputBlog: EntradaBlog) {
-    console.log(oInputBlog);
     this.oEditar = oInputBlog;
-    this.editClass = '';
-    this.formClass = 'oculto';
+    if (this.editClass === 'oculto') {
+      this.editClass = '';
+      this.formClass = 'oculto';
+    } else {
+      this.editClass = 'oculto';
+      this.formClass = '';
+    }
+
   }
   isEmpty () {
 
