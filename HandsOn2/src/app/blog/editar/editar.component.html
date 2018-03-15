@@ -1,4 +1,4 @@
-<form novalidate [ngClass]="oValidado" #form1="ngForm" (ngSubmit)="enviarInput()">
+<form novalidate [ngClass]="oValidado" #form1="ngForm" (ngSubmit)="editarInput()">
   <!--Text-->  
   <fieldset>
       <legend>Editar Entrada</legend>  
@@ -9,7 +9,7 @@
         <input type="text" class="form-control col-7"
         name="titulo" id="titulo" required maxlength="100"
         placeholder="Indica el título (es obligatorio)"
-        [(ngModel)]="oInputBlog.titulo"
+        [(ngModel)]="oEntrada.titulo"
         #tituloState="ngModel">
     </div>
     <div [hidden]="tituloState.valid || tituloState.untouched ">
@@ -26,7 +26,7 @@
         id="coments" name="coments" maxlength="800"
         required 
         placeholder="Introduce la información de tu entrada"
-        [(ngModel)]="oInputBlog.descripcion"
+        [(ngModel)]="oEntrada.descripcion"
         #comentsState="ngModel">
         </textarea>
       </div>
