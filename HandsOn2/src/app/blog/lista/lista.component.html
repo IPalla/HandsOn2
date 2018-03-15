@@ -1,9 +1,17 @@
 
 <div class="card">
+
   <div class="card-body">
-    <h4 class="card-title" (click)="setContent()">{{ title }}
-        <i [className]="this.arrowClass"></i></h4>
-    <p class="card-text blog-content">{{ content }}</p>
-    <p class="card-text">By {{ author }}</p>
+  <h4 class="card-title" (click)="setContent()">{{ title }}
+  <i [className]="this.arrowClass"></i> </h4>
+  <p class="card-text blog-content">{{ content }}</p>
+  <p class="card-text ">By {{ author }}</p>
+  <div class="container-fluid text-center text-md-center">
+      <button type="button" class="btn btn-danger" [ngClass]="admin" (click)="deleteEntrada()">  <i class="fa fa-trash"></i> </button>
+      <button type="button" class="btn btn-danger" (click)="editEntrada()">  <i class="fa fa-edit"></i> </button>
   </div>
+  <div>
+
+  </div>
+
 </div>

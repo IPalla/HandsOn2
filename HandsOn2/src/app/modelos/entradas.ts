@@ -4,6 +4,7 @@ export interface EntradaBlog {
     nombre: string;
     correo: string;
     telefono: string;
+    pass: string;
     /*Datos contenido entrada*/
     titulo: string;
     descripcion: string;

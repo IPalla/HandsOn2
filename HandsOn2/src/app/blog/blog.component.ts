@@ -1,6 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { BlogService } from '../../servicios/blog.service';
 import { EntradaBlog } from '../modelos/entradas';
+import { Router } from '@angular/router';
+import { ListaComponent } from './lista/lista.component';
 
 @Component({
   selector: 'app-blog',
@@ -8,13 +10,16 @@ import { EntradaBlog } from '../modelos/entradas';
   styleUrls: ['./blog.component.css']
 })
 export class BlogComponent implements OnInit {
-
+  admin: string;
   aEntradas: Array<EntradaBlog>;
   sContacto: string;
   sFiltrar: string; /*Valor del search*/
   claseError: string;
-  counter: number;
-  constructor(public blogservice: BlogService) { }
+  i: number;
+  editClass: string;
+  formClass: string;
+  /* @ViewChild('li') input: ListaComponent; */
+  constructor(public blogservice: BlogService, private router: Router) { }
 
   ngOnInit() {
     this.sFiltrar = '';
@@ -25,9 +30,12 @@ export class BlogComponent implements OnInit {
         this.aEntradas = response;
       }
     );
-  }
+    (this.router.url.slice(6) === 'admin') ? this.admin = 'admin' : this.admin = 'no-admin';
+}
   // respuesta a los eventos en el componente altas
   addEntrada(oInputBlog) {
+
+
     this.blogservice.setEntrada(oInputBlog)
       .then(
         () => {
@@ -36,7 +44,27 @@ export class BlogComponent implements OnInit {
         });
   }
 
+  deleteEntrada(oInputBlog) {
+    this.blogservice.deleteEntrada(oInputBlog)
+      .then(
+        () => {
+          this.blogservice.getEntradas()
+          .then(response => this.aEntradas = response);
+        });
+  }
+  editEntrada(oInputBlog) {
+    console.log(oInputBlog);
+    this.editClass = '';
+    this.formClass = 'oculto';
+   /*  this.blogservice.deleteEntrada(oInputBlog)
+      .then(
+        () => {
+          this.blogservice.getEntradas()
+          .then(response => this.aEntradas = response);
+        }); */
+  }
   isEmpty () {
+
     if (this.sFiltrar.length) {
       this.sinResultados();
       return false;
@@ -44,7 +72,7 @@ export class BlogComponent implements OnInit {
   }
 
   sinResultados() {
-    console.log(document.getElementById('entradas'));
+
     if (!document.getElementById('entradas')) {
       this.claseError = '';
     } else {

@@ -37,10 +37,15 @@ html:after {
 
   text-align: center;
   align-content: center;
-   
+
   margin-left: auto;
-  margin-right: auto; 
+  margin-right: auto;
 }
-
-
-
+.content
+{
+  height: 100%;
+    min-height: 70%;
+    min-height: -webkit-calc(100% - 186px);
+    min-height: -moz-calc(100% - 186px);
+    min-height: calc(100% - 186px);
+}

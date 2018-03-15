@@ -6,35 +6,38 @@
                      <div class="row">
                        <h1 class="col-md-6"> Entradas de Blog </h1>
                        <form class="form-inline col-md-6" action="/action_page.php">
-                         <input class="form-control mr-sm-2" name="search" type="text"  placeholder="Buscar" [(ngModel)]="sFiltrar">
+                        <div class="search">
+                          <span class="fa fa-search"></span>
+                          <input class="form-control mr-sm-2" name="search" type="text"  placeholder="Buscar" [(ngModel)]="sFiltrar">
+                        </div>
                        </form>
                      </div>
                   </div>
                  <div class="card-body">
                  <ul>
-                   <li *ngFor="let item of aEntradas; index as i; " >
+                   <li *ngFor="let item of aEntradas; index as i;" >
                         <ng-container *ngIf="!isEmpty(); else listaCompleta">
                               <ng-container *ngIf="item.titulo.includes(sFiltrar)" >
                                 <div id="entradas">
-                                  <app-lista [oEntrada]="item"  ></app-lista>
+                                  <app-lista  [oEntrada]="item" [admin]="admin" (outDeleteItem)="deleteEntrada($event)" (outEditItem)="editEntrada($event)"></app-lista>
                                 </div>
                               </ng-container>
                         </ng-container>
-                        {{ counter }}
                         <ng-template #listaCompleta>
-                            <app-lista [oEntrada]="item"></app-lista>
-                        </ng-template>
-
+                            <app-lista  [oEntrada]="item" [admin]="admin" (outDeleteItem)="deleteEntrada($event)" (outEditItem)="editEntrada($event)"></app-lista>
+                          </ng-template>
+                          <div [className]="claseError">
+                              <div class="alert alert-danger">
+                                  <strong>Error!</strong> No se han encontrado resultados.
+                                </div>
+                           </div>
                    </li>
-                   <div [className]="claseError">
-                      <div class="alert alert-danger">
-                          <strong>Error!</strong> No se han encontrado resultados.
-                        </div>
-                   </div>
+
                  </ul>
                </div>
                <div class="card-footer">
-                 <app-crear (outAddBlogItem)="addEntrada($event)"></app-crear>
+                 <app-editar></app-editar>
+                 <app-crear (outAddBlogItem)="addEntrada($event)" [ngClass]="formClass"></app-crear>
                </div>
 
                 </div>

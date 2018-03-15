@@ -24,7 +24,7 @@ export class CrearComponent implements OnInit {
   }
 
   private resetInput() {
-      this.oInputBlog = { id: undefined, nombre: '', correo: '', telefono: '', titulo: '', descripcion: '' };
+      this.oInputBlog = { id: undefined, nombre: '', correo: '', telefono: '', pass: '', titulo: '', descripcion: '' };
   }
 
   private borrarInput() {

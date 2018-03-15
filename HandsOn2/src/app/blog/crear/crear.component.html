@@ -42,7 +42,29 @@
               El correo tiene que tener formato xxx@xx.xx
             </div>
           </div>  
-      </div>     
+      </div>   
+      
+      <div class="form-group row ">
+        <!--Etiqueta / Campo "contraseña"--> 
+        <label for="correo"  class="col-3">Contraseña</label>
+        <input type="password" class="form-control col-7"
+        id="pass" name="pass"
+        required pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$"
+        placeholder="Indica la contraseña (es obligatorio)"
+        [(ngModel)]="oInputBlog.pass"
+        #passState="ngModel">
+        <div [hidden]="passState.valid || passState.untouched ">
+          <div class="error-message"
+            [hidden]="!passState.errors?.required">
+            La contraseña es obligatoria
+          </div>
+          <div class="error-message"
+            [hidden] = "!passState.errors?.pattern">
+             <p>*La contraseña debe tener una longitud mínima de 8 </p>
+             <p>*Mayúsculas, minúsculas y números.</p> 
+          </div>
+        </div>  
+    </div>  
       
   
       <div class="form-group row">
