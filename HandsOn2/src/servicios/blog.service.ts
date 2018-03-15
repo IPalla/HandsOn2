@@ -36,5 +36,9 @@ export class BlogService {
       const urldelete = this.sURL + '/' + oEntrada.id;
       return this.http.delete(urldelete).toPromise();
     }
+    editEntrada(oEntrada: EntradaBlog) {
+      const urlput = this.sURL + '/' + oEntrada.id;
+      return this.http.put(urlput, oEntrada).toPromise();
+    }
 }
 

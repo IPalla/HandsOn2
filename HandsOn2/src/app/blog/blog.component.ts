@@ -12,6 +12,7 @@ import { ListaComponent } from './lista/lista.component';
 export class BlogComponent implements OnInit {
   admin: string;
   aEntradas: Array<EntradaBlog>;
+  oEditar: EntradaBlog;
   sContacto: string;
   sFiltrar: string; /*Valor del search*/
   claseError: string;
@@ -22,6 +23,7 @@ export class BlogComponent implements OnInit {
   constructor(public blogservice: BlogService, private router: Router) { }
 
   ngOnInit() {
+    this.oEditar = { id: undefined, nombre: '', correo: '', telefono: '', pass: '', titulo: '', descripcion: '' };
     this.sFiltrar = '';
     this.aEntradas = [];
     this.claseError = 'oculto';
@@ -52,16 +54,19 @@ export class BlogComponent implements OnInit {
           .then(response => this.aEntradas = response);
         });
   }
-  editEntrada(oInputBlog) {
-    console.log(oInputBlog);
-    this.editClass = '';
-    this.formClass = 'oculto';
-   /*  this.blogservice.deleteEntrada(oInputBlog)
+  editEntrada(oInputBlog: EntradaBlog) {
+   this.blogservice.editEntrada(oInputBlog)
       .then(
         () => {
           this.blogservice.getEntradas()
           .then(response => this.aEntradas = response);
-        }); */
+        });
+  }
+  editEntradaAux(oInputBlog: EntradaBlog) {
+    console.log(oInputBlog);
+    this.oEditar = oInputBlog;
+    this.editClass = '';
+    this.formClass = 'oculto';
   }
   isEmpty () {
 
