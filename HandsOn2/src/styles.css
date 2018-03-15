@@ -11,7 +11,6 @@
      padding: 0;
      list-style: none;
 }
-<<<<<<< HEAD
 
 html:after {
     content: "";
@@ -28,8 +27,3 @@ html:after {
 }
 
   
-=======
-html{
-  height: 100%;
-}
->>>>>>> 02d16b2fd8671aacd029b9ec60f2bf966127d1fa
