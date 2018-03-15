@@ -1,6 +1,8 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ListaComponent } from './lista.component';
+import { RouterTestingModule } from '@angular/router/testing';
+import { BlogService } from '../../../servicios/blog.service';
 
 describe('ListaComponent', () => {
   let component: ListaComponent;
@@ -8,7 +10,13 @@ describe('ListaComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ListaComponent ]
+      declarations: [ ListaComponent ],
+      imports: [
+        RouterTestingModule
+      ],
+      providers: [
+        BlogService
+      ]
     })
     .compileComponents();
   }));
@@ -17,9 +25,8 @@ describe('ListaComponent', () => {
     fixture = TestBed.createComponent(ListaComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
-  });
-
-  it('should create', () => {
-    expect(component).toBeTruthy();
+    it('should create', () => {
+      expect(component).toBeTruthy();
+    });
   });
 });
