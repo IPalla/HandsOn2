@@ -1,7 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { BlogService } from '../../servicios/blog.service';
 import { EntradaBlog } from '../modelos/entradas';
 import { Router } from '@angular/router';
+import { ListaComponent } from './lista/lista.component';
 
 @Component({
   selector: 'app-blog',
@@ -14,6 +15,8 @@ export class BlogComponent implements OnInit {
   sContacto: string;
   sFiltrar: string; /*Valor del search*/
   claseError: string;
+  i: number;
+  /* @ViewChild('li') input: ListaComponent; */
   constructor(public blogservice: BlogService, private router: Router) { }
 
   ngOnInit() {
@@ -29,6 +32,8 @@ export class BlogComponent implements OnInit {
 }
   // respuesta a los eventos en el componente altas
   addEntrada(oInputBlog) {
+
+
     this.blogservice.setEntrada(oInputBlog)
       .then(
         () => {
@@ -46,6 +51,7 @@ export class BlogComponent implements OnInit {
         });
   }
   isEmpty () {
+
     if (this.sFiltrar.length) {
       this.sinResultados();
       return false;
@@ -53,6 +59,7 @@ export class BlogComponent implements OnInit {
   }
 
   sinResultados() {
+
     if (!document.getElementById('entradas')) {
       this.claseError = '';
     } else {

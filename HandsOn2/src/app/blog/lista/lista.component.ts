@@ -15,7 +15,7 @@ export class ListaComponent implements OnInit {
   arrowClass: string;
   title: string;
   author: string;
-  constructor(public blog_servicio: BlogService) {
+  constructor() {
     this.outDeleteItem = new EventEmitter();
   }
 
@@ -36,6 +36,5 @@ export class ListaComponent implements OnInit {
   }
   deleteEntrada() {
     this.outDeleteItem.emit(this.oEntrada); /*Envio del objeto entrada al padre */
-
   }
 }
