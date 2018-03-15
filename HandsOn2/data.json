@@ -8,6 +8,15 @@
       "titulo": "nueva2",
       "descripcion": "asdfasdf231asdfqwa12312fasfd31asdfqwa1231231asdfqwa",
       "id": 2
+    },
+    {
+      "nombre": "aseeee",
+      "correo": "nacho@gmail.com",
+      "telefono": "123123123",
+      "pass": "12345678Ab",
+      "titulo": "Gasasfwef",
+      "descripcion": "eeeesafasefaseg",
+      "id": 3
     }
   ]
 }

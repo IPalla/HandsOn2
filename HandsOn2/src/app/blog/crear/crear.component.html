@@ -7,7 +7,7 @@
           <!--Etiqueta / Campo "Nombre"-->
           <label for="nombre" class="col-3">Nombre Usuario</label>
           <input type="text" class="form-control col-7"
-          name="nombre" id="nombre" required minlength="3"
+          name="nombre"  required minlength="3"
           placeholder="Indica el nombre (es obligatorio)"
           [(ngModel)]="oInputBlog.nombre"
           #nameState="ngModel">
@@ -27,7 +27,7 @@
           <!--Etiqueta / Campo "Correo"-->
           <label for="correo"  class="col-3">Correo</label>
           <input type="text" class="form-control col-7"
-          id="correo" name="correo"
+           name="correo"
           required pattern="^[a-z]+[a-z0-9._]+@[a-z]+\.[a-z.]{2,5}$"
           placeholder="Indica el correo (es obligatorio)"
           [(ngModel)]="oInputBlog.correo"
@@ -38,7 +38,7 @@
         <!--Etiqueta / Campo "contraseña"-->
         <label for="correo"  class="col-3">Contraseña</label>
         <input type="password" class="form-control col-7"
-        id="pass" name="pass"
+         name="pass"
         required pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$"
         placeholder="Indica la contraseña (es obligatorio)"
         [(ngModel)]="oInputBlog.pass"
@@ -61,7 +61,7 @@
           <!--Etiqueta / Campo "telefono"-->
           <label for="telefono" class="col-3">Teléfono</label>
           <input type="text" class="form-control col-7"
-          id="telefono" name="telefono"
+           name="telefono"
           required pattern="^\d{9}$"
           placeholder="Indica el teléfono (es obligatorio)"
           [(ngModel)]="oInputBlog.telefono"
@@ -82,7 +82,7 @@
         <!--Etiqueta / Campo "titulo"-->
         <label for="titulo" class="col-3">Título</label>
         <input type="text" class="form-control col-7"
-        name="titulo" id="titulo" required maxlength="100"
+        name="titulo"  required maxlength="100"
         placeholder="Indica el título (es obligatorio)"
         [(ngModel)]="oInputBlog.titulo"
         #tituloState="ngModel">
@@ -98,7 +98,7 @@
          <!--Etiqueta / Campo "contenido"-->
         <label for="coments" class="col-3">Descripción</label>
         <textarea type="text" rows="7" class="form-control col-7"
-        id="coments" name="coments" maxlength="800"
+         name="coments" maxlength="800"
         required
         placeholder="Introduce la información de tu entrada"
         [(ngModel)]="oInputBlog.descripcion"
