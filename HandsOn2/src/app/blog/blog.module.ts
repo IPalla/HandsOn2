@@ -5,7 +5,6 @@ import { BlogRoutingModule } from './blog-routing.module';
 import { BlogComponent } from './blog.component';
 import { ListaComponent } from './lista/lista.component';
 import { CrearComponent } from './crear/crear.component';
-import { DetallesComponent } from './detalles/detalles.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { BlogService } from '../../servicios/blog.service';
@@ -20,8 +19,7 @@ import { BlogService } from '../../servicios/blog.service';
   declarations: [
     BlogComponent,
     ListaComponent,
-    CrearComponent,
-    DetallesComponent
+    CrearComponent
   ],
   exports: [BlogComponent],
   providers: [

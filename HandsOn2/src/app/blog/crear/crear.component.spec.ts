@@ -1,6 +1,8 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { CrearComponent } from './crear.component';
+import { RouterTestingModule } from '@angular/router/testing';
+import { BlogService } from '../../../servicios/blog.service';
 
 describe('CrearComponent', () => {
   let component: CrearComponent;
@@ -8,7 +10,13 @@ describe('CrearComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ CrearComponent ]
+      declarations: [ CrearComponent ],
+      imports: [
+        RouterTestingModule
+      ],
+      providers: [
+        BlogService
+      ]
     })
     .compileComponents();
   }));
@@ -17,9 +25,8 @@ describe('CrearComponent', () => {
     fixture = TestBed.createComponent(CrearComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
-  });
-
-  it('should create', () => {
-    expect(component).toBeTruthy();
+    it('should create', () => {
+      expect(component).toBeTruthy();
+    });
   });
 });
