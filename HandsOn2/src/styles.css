@@ -11,6 +11,19 @@
      padding: 0;
      list-style: none;
 }
-html{
-  height: 100%;
+
+html:after {
+    content: "";
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(./assets/montana-nevada.jpg);
+    opacity: 0.1; 
+    overflow:auto;
+    z-index: -1;
+    background-size: cover;
 }
+
+  

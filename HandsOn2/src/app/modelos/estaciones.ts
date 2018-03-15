@@ -18,7 +18,7 @@ export interface ForfaitsIf {
 export interface FotoIf {
   alt: string;
   source: string;
-
+  info: string;
 }
 export class Estacion implements PistasIf, ForfaitsIf, FotoIf {
   // tslint:disable-next-line:max-line-length
