@@ -21,11 +21,7 @@ import { EstacionesModule } from './estaciones/estaciones.module';
     CoreModule,
     AboutModule,
     BlogModule,
-<<<<<<< HEAD
-    EstacionesModule,
-=======
     EstacionesModule
->>>>>>> 02d16b2fd8671aacd029b9ec60f2bf966127d1fa
   ],
   providers: [],
   bootstrap: [AppComponent]
