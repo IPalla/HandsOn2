@@ -1,10 +1,10 @@
 <form novalidate [ngClass]="oValidado" #form1="ngForm" (ngSubmit)="enviarInput()">
-  <!--Text-->  
+  <!--Text-->
   <fieldset>
       <legend>Nueva Entrada</legend>
-     
+
       <div class="form-group row ">
-          <!--Etiqueta / Campo "Nombre"-->                        
+          <!--Etiqueta / Campo "Nombre"-->
           <label for="nombre" class="col-3">Nombre Usuario</label>
           <input type="text" class="form-control col-7"
           name="nombre" id="nombre" required minlength="3"
@@ -19,12 +19,12 @@
               [hidden] = "!nameState.errors?.minlength">
               El nombre debe tener un mínimo de 3 caracteres
             </div>
-          </div> 
-      </div>  
-      
+          </div>
+      </div>
+
 
       <div class="form-group row ">
-          <!--Etiqueta / Campo "Correo"--> 
+          <!--Etiqueta / Campo "Correo"-->
           <label for="correo"  class="col-3">Correo</label>
           <input type="text" class="form-control col-7"
           id="correo" name="correo"
@@ -32,20 +32,10 @@
           placeholder="Indica el correo (es obligatorio)"
           [(ngModel)]="oInputBlog.correo"
           #correoState="ngModel">
-          <div [hidden]="correoState.valid || correoState.untouched ">
-            <div class="error-message"
-              [hidden]="!correoState.errors?.required">
-              El correo es obligatorio
-            </div>
-            <div class="error-message"
-              [hidden] = "!correoState.errors?.pattern">
-              El correo tiene que tener formato xxx@xx.xx
-            </div>
-          </div>  
-      </div>   
-      
+      </div>
+
       <div class="form-group row ">
-        <!--Etiqueta / Campo "contraseña"--> 
+        <!--Etiqueta / Campo "contraseña"-->
         <label for="correo"  class="col-3">Contraseña</label>
         <input type="password" class="form-control col-7"
         id="pass" name="pass"
@@ -61,14 +51,14 @@
           <div class="error-message"
             [hidden] = "!passState.errors?.pattern">
              <p>*La contraseña debe tener una longitud mínima de 8 </p>
-             <p>*Mayúsculas, minúsculas y números.</p> 
+             <p>*Mayúsculas, minúsculas y números.</p>
           </div>
-        </div>  
-    </div>  
-      
-  
+        </div>
+    </div>
+
+
       <div class="form-group row">
-          <!--Etiqueta / Campo "telefono"--> 
+          <!--Etiqueta / Campo "telefono"-->
           <label for="telefono" class="col-3">Teléfono</label>
           <input type="text" class="form-control col-7"
           id="telefono" name="telefono"
@@ -89,7 +79,7 @@
 
 
       <div class="form-group row">
-        <!--Etiqueta / Campo "titulo"-->         
+        <!--Etiqueta / Campo "titulo"-->
         <label for="titulo" class="col-3">Título</label>
         <input type="text" class="form-control col-7"
         name="titulo" id="titulo" required maxlength="100"
@@ -101,15 +91,15 @@
         <div class="error-message"
           [hidden]="!tituloState.errors?.required">
           El titulo es obligatorio</div>
-      </div> 
+      </div>
 
 
       <div class="form-group row">
-         <!--Etiqueta / Campo "contenido"--> 
+         <!--Etiqueta / Campo "contenido"-->
         <label for="coments" class="col-3">Descripción</label>
         <textarea type="text" rows="7" class="form-control col-7"
         id="coments" name="coments" maxlength="800"
-        required 
+        required
         placeholder="Introduce la información de tu entrada"
         [(ngModel)]="oInputBlog.descripcion"
         #comentsState="ngModel">
@@ -122,7 +112,7 @@
     </div>
 
     <div class="row align-items-center">
-      <!--Botone "Submit | Borrar"--> 
+      <!--Botone "Submit | Borrar"-->
       <div class="col-9 offset-2">
         <button type="submit" class="btn btn-primary mr-2"
         [disabled]="form1.invalid">
@@ -133,8 +123,8 @@
       </div>
     </div>
 
-  </fieldset>  
+  </fieldset>
 
-  
+
 
 </form>

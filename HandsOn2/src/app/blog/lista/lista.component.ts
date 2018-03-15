@@ -16,9 +16,16 @@ export class ListaComponent implements OnInit {
   arrowClass: string;
   title: string;
   author: string;
+  pass: string;
+  contraClass: string;
+  buttonsClass: string;
+  buttonFailClass: string;
+
   constructor() {
     this.outDeleteItem = new EventEmitter();
     this.outEditItem = new EventEmitter();
+    this.contraClass = 'oculto';
+    this.buttonsClass = '';
   }
 
   ngOnInit() {
@@ -40,6 +47,18 @@ export class ListaComponent implements OnInit {
     this.outDeleteItem.emit(this.oEntrada); /*Envio del objeto entrada al padre */
   }
   editEntrada() {
-    this.outEditItem.emit(this.oEntrada); /*Envio del objeto entrada al padre */
+    if (this.oEntrada.pass === this.pass) {
+      console.log('entra');
+      this.outEditItem.emit(this.oEntrada); /*Envio del objeto entrada al padre */
+      return;
+    }
+    if (this.contraClass === 'oculto') {
+      this.contraClass = '';
+      this.buttonsClass = 'oculto';
+    } else {
+      this.contraClass = 'oculto';
+      this.buttonsClass = '';
+    }
+
   }
 }
