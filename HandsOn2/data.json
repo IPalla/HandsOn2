@@ -1,28 +1,12 @@
 {
   "posts": [
     {
-      "nombre": "Holaqueta",
+      "nombre": "123",
       "correo": "nacho@gmail.com",
       "telefono": "123123123",
-      "titulo": "1231223",
-      "descripcion": "123123123123123123123123123123123123123123123123",
+      "titulo": "asdfasdf",
+      "descripcion": "asdfasdfasdfasdf",
       "id": 1
-    },
-    {
-      "nombre": "Holaqueta123",
-      "correo": "nacho@gmail.com",
-      "telefono": "123123123",
-      "titulo": "asasdfasdf",
-      "descripcion": "ASdfase113",
-      "id": 2
-    },
-    {
-      "nombre": "asdfasdf",
-      "correo": "nacho@gmail.com",
-      "telefono": "123123123",
-      "titulo": "123123",
-      "descripcion": "asdfasdf",
-      "id": 3
     }
   ]
 }

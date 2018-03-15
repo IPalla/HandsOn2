@@ -10,6 +10,7 @@ export class ListaComponent implements OnInit {
   @Input() oEntrada: any;
   @Input() admin: string;
   @Output() outDeleteItem: EventEmitter<string>;
+  @Output() outEditItem: EventEmitter<string>;
   shown: boolean;
   content: string;
   arrowClass: string;
@@ -17,6 +18,7 @@ export class ListaComponent implements OnInit {
   author: string;
   constructor() {
     this.outDeleteItem = new EventEmitter();
+    this.outEditItem = new EventEmitter();
   }
 
   ngOnInit() {
@@ -36,5 +38,8 @@ export class ListaComponent implements OnInit {
   }
   deleteEntrada() {
     this.outDeleteItem.emit(this.oEntrada); /*Envio del objeto entrada al padre */
+  }
+  editEntrada() {
+    this.outEditItem.emit(this.oEntrada); /*Envio del objeto entrada al padre */
   }
 }

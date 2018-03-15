@@ -16,6 +16,8 @@ export class BlogComponent implements OnInit {
   sFiltrar: string; /*Valor del search*/
   claseError: string;
   i: number;
+  editClass: string;
+  formClass: string;
   /* @ViewChild('li') input: ListaComponent; */
   constructor(public blogservice: BlogService, private router: Router) { }
 
@@ -49,6 +51,17 @@ export class BlogComponent implements OnInit {
           this.blogservice.getEntradas()
           .then(response => this.aEntradas = response);
         });
+  }
+  editEntrada(oInputBlog) {
+    console.log(oInputBlog);
+    this.editClass = '';
+    this.formClass = 'oculto';
+   /*  this.blogservice.deleteEntrada(oInputBlog)
+      .then(
+        () => {
+          this.blogservice.getEntradas()
+          .then(response => this.aEntradas = response);
+        }); */
   }
   isEmpty () {
 
