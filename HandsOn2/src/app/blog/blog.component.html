@@ -19,12 +19,12 @@
                         <ng-container *ngIf="!isEmpty(); else listaCompleta">
                               <ng-container *ngIf="item.titulo.includes(sFiltrar)" >
                                 <div id="entradas">
-                                  <app-lista  [oEntrada]="item" [admin]="admin" (outDeleteItem)="deleteEntrada($event)" #li></app-lista>
+                                  <app-lista  [oEntrada]="item" [admin]="admin" (outDeleteItem)="deleteEntrada($event)" (outEditItem)="editEntrada($event)"></app-lista>
                                 </div>
                               </ng-container>
                         </ng-container>
                         <ng-template #listaCompleta>
-                            <app-lista  [oEntrada]="item" [admin]="admin" (outDeleteItem)="deleteEntrada($event)" #li></app-lista>
+                            <app-lista  [oEntrada]="item" [admin]="admin" (outDeleteItem)="deleteEntrada($event)" (outEditItem)="editEntrada($event)"></app-lista>
                           </ng-template>
                           <div [className]="claseError">
                               <div class="alert alert-danger">
@@ -36,8 +36,8 @@
                  </ul>
                </div>
                <div class="card-footer">
-                 <app-crear (outAddBlogItem)="addEntrada($event)"></app-crear>
                  <app-editar></app-editar>
+                 <app-crear (outAddBlogItem)="addEntrada($event)" [ngClass]="formClass"></app-crear>
                </div>
 
                 </div>
