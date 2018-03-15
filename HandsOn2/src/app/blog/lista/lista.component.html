@@ -6,5 +6,5 @@
   <i [className]="this.arrowClass"></i> </h4>
   <p class="card-text blog-content">{{ content }}</p>
   <p class="card-text ">By {{ author }}</p>
-  <button type="button" class="btn btn-danger" [ngClass]="admin">  <i class="fa fa-trash"></i> </button>
+  <button type="button" class="btn btn-danger" [ngClass]="admin" (click)="deleteEntrada()">  <i class="fa fa-trash"></i> </button>
 </div>
