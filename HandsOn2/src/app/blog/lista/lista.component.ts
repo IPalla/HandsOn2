@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { BlogService } from '../../../servicios/blog.service';
 
 @Component({
   selector: 'app-lista',
@@ -6,14 +7,14 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./lista.component.css']
 })
 export class ListaComponent implements OnInit {
-
   @Input() oEntrada: any;
+  @Input() admin: string;
   shown: boolean;
   content: string;
   arrowClass: string;
   title: string;
   author: string;
-  constructor() { }
+  constructor(public blog_servicio: BlogService) { }
 
   ngOnInit() {
     this.shown = false;
@@ -21,7 +22,6 @@ export class ListaComponent implements OnInit {
     this.arrowClass = 'fa fa-sort-down';
     this.title = this.oEntrada.titulo;
     this.author = this.oEntrada.nombre;
-    console.log(this.oEntrada);
   }
   setContent() {
     this.shown = !this.shown;
@@ -30,7 +30,8 @@ export class ListaComponent implements OnInit {
 
   }
   fadeContent() {
-    console.log(this.oEntrada.descripcion);
   }
+  deleteEntrada(oEntrada) {
 
+  }
 }

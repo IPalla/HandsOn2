@@ -16,13 +16,12 @@
                         <ng-container *ngIf="!isEmpty(); else listaCompleta">
                               <ng-container *ngIf="item.titulo.includes(sFiltrar)" >
                                 <div id="entradas">
-                                  <app-lista [oEntrada]="item"  ></app-lista>
+                                  <app-lista  [oEntrada]="item" [admin]="admin"></app-lista>
                                 </div>
                               </ng-container>
                         </ng-container>
-                        {{ counter }}
                         <ng-template #listaCompleta>
-                            <app-lista [oEntrada]="item"></app-lista>
+                            <app-lista  [oEntrada]="item" [admin]="admin"></app-lista>
                         </ng-template>
 
                    </li>

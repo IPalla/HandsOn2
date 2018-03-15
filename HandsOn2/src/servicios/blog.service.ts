@@ -29,8 +29,12 @@ export class BlogService {
 
     setEntrada(oEntrada) {
         console.log('Enviando datos');
-        console.log(oEntrada);
         return this.http.post(this.sURL, oEntrada).toPromise();
+    }
+
+    deleteEntrada(oEntrada: EntradaBlog) {
+      const urldelete = this.sURL + '/' + oEntrada.id;
+      return this.http.post(this.sURL, oEntrada).toPromise();
     }
 }
 
