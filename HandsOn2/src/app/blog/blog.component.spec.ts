@@ -6,6 +6,7 @@ import { ListaComponent } from './lista/lista.component';
 import { FormsModule } from '@angular/forms';
 import { BlogService } from '../../servicios/blog.service';
 import { RouterTestingModule } from '@angular/router/testing';
+import { EditarComponent } from './editar/editar.component';
 
 describe('BlogComponent', () => {
   let component: BlogComponent;
@@ -15,7 +16,8 @@ describe('BlogComponent', () => {
     TestBed.configureTestingModule({
       declarations: [ BlogComponent,
         CrearComponent,
-        ListaComponent],
+        ListaComponent,
+        EditarComponent],
       imports: [
         FormsModule,
         RouterTestingModule
