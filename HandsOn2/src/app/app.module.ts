@@ -9,7 +9,6 @@ import { FormsModule } from '@angular/forms';
 import { CoreModule } from './core/core.module';
 import { BlogModule } from './blog/blog.module';
 import { EstacionesModule } from './estaciones/estaciones.module';
-import { MenuComponent } from './core/menu/menu.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +22,6 @@ import { MenuComponent } from './core/menu/menu.component';
     AboutModule,
     BlogModule,
     EstacionesModule,
-    MenuComponent
   ],
   providers: [],
   bootstrap: [AppComponent]
