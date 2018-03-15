@@ -4,11 +4,11 @@ import { Estacion } from '../../modelos/estaciones';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-la-pinilla',
-  templateUrl: './la-pinilla.component.html',
-  styleUrls: ['./la-pinilla.component.css']
+  selector: 'app-estacion-estandar',
+  templateUrl: './estacion-estandar.component.html',
+  styleUrls: ['./estacion-estandar.component.css']
 })
-export class LaPinillaComponent implements OnInit {
+export class EstacionEstandarComponent implements OnInit {
 
   oEstacion: Estacion;
   titulo: string;
