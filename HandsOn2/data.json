@@ -1,14 +1,6 @@
 {
   "posts": [
     {
-      "nombre": "123",
-      "correo": "nacho@gmail.com",
-      "telefono": "123123123",
-      "titulo": "aaa",
-      "descripcion": "asdfasdfasdfasdf",
-      "id": 1
-    },
-    {
       "nombre": "Juaa",
       "correo": "nacho@gmail.com",
       "telefono": "123123123",
