@@ -7,7 +7,7 @@
         <!--Etiqueta / Campo "titulo"-->
         <label for="titulo" class="col-3">Título</label>
         <input type="text" class="form-control col-7"
-        name="titulo" id="titulo" required maxlength="100"
+        name="titulo" required maxlength="100"
         placeholder="Indica el título (es obligatorio)"
         [(ngModel)]="oEntrada.titulo"
         #tituloState="ngModel">
@@ -23,7 +23,7 @@
          <!--Etiqueta / Campo "contenido"-->
         <label for="coments" class="col-3">Descripción</label>
         <textarea type="text" rows="7" class="form-control col-7"
-        id="coments" name="coments" maxlength="800"
+        name="coments" maxlength="800"
         required
         placeholder="Introduce la información de tu entrada"
         [(ngModel)]="oEntrada.descripcion"
