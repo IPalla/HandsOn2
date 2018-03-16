@@ -5,6 +5,14 @@
 
       <div class="form-group row ">
           <!--Etiqueta / Campo "Nombre"-->
+<<<<<<< HEAD
+          <label for="nombre" class="col-3">Nombre Usuario</label>
+          <input type="text" class="form-control col-7 col-offset-2"
+          name="nombre"  required minlength="3"
+          placeholder="Indica el nombre (es obligatorio)"
+          [(ngModel)]="oInputBlog.nombre"
+          #nameState="ngModel">
+=======
           <label for="nombre" class="col-md-3">Nombre Usuario</label>
           <input type="text" class="form-control col-md-7"
           name="nombre" id="nombre" required minlength="3"
@@ -27,7 +35,19 @@
           </div>
         </div>
       </div>
+>>>>>>> bd794835d0a5561314eb20991ca39c5d2a6bba61
 
+      </div>
+      <div class="error row text-center" [hidden]="nameState.valid || nameState.untouched ">
+          <div class="error-message col-12 row text-center"
+            [hidden]="!nameState.errors?.required">
+            <p>*El nombre es obligatorio</p>
+          </div>
+          <div class="error-message row col-12 text-center"
+            [hidden] = "!nameState.errors?.minlength">
+            <p>*El nombre debe tener un mínimo de 3 caracteres</p>
+          </div>
+        </div>
 
       <div class="form-group row ">
           <!--Etiqueta / Campo "Correo"-->
@@ -65,6 +85,18 @@
         placeholder="Indica la contraseña (es obligatorio)"
         [(ngModel)]="oInputBlog.pass"
         #passState="ngModel">
+<<<<<<< HEAD
+        <div class="error" [hidden]="passState.valid || passState.untouched ">
+          <div class="error-message"
+            [hidden]="!passState.errors?.required">
+            <p>*La contraseña es obligatoria</p>
+          </div>
+          <div class="error-message"
+            [hidden] = "!passState.errors?.pattern">
+             <p>*La contraseña debe tener una longitud mínima de 8 </p>
+             <p>*Mayúsculas, minúsculas y números.</p>
+          </div>
+=======
     </div>
     <!-- Validación contraseña -->
     <div class="error" [hidden]="passState.valid || passState.untouched ">
@@ -81,6 +113,7 @@
         </div>
         <div class="alert alert-warning">
           <strong>Warning!</strong> La contraseña debe contener mayúsculas, minúsculas y números.
+>>>>>>> bd794835d0a5561314eb20991ca39c5d2a6bba61
         </div>
       </div>
     </div>

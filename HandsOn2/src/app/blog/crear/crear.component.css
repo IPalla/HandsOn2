@@ -1,6 +1,18 @@
+<<<<<<< HEAD
+/* .error p{
+=======
 .error{
+>>>>>>> bd794835d0a5561314eb20991ca39c5d2a6bba61
     font-size: 0.8rem;
     margin-bottom: .3rem;
     text-align: center;
+<<<<<<< HEAD
+    width: 100%;
+} */
+.row .error{
+  margin-left: 10px;
+}
+=======
     margin-top: 0px;
 } 
+>>>>>>> bd794835d0a5561314eb20991ca39c5d2a6bba61
