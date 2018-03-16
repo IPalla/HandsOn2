@@ -1,6 +1,15 @@
 {
   "posts": [
     {
+      "nombre": "Angel",
+      "correo": "angel.martin@babel.es",
+      "telefono": "666666666",
+      "pass": "Angel1234",
+      "titulo": "Estación la Pinilla",
+      "descripcion": "Una mierda, mucha gente.\nNo vuelvo mas",
+      "id": 1
+    },
+    {
       "nombre": "Juaa",
       "correo": "nacho@gmail.com",
       "telefono": "123123123",

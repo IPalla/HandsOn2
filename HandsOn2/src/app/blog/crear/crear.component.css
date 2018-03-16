@@ -1,0 +1,9 @@
+.error p{
+    font-size: 0.8rem;
+    color: maroon;
+    margin-bottom: .3rem;
+    display: block;
+    border: 1px solid black;
+    text-align: center;
+    width: 100%;
+}

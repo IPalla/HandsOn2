@@ -11,13 +11,14 @@
           placeholder="Indica el nombre (es obligatorio)"
           [(ngModel)]="oInputBlog.nombre"
           #nameState="ngModel">
-          <div [hidden]="nameState.valid || nameState.untouched ">
+          <div class="error" [hidden]="nameState.valid || nameState.untouched ">
             <div class="error-message"
               [hidden]="!nameState.errors?.required">
-              El nombre es obligatorio</div>
+              <p>*El nombre es obligatorio</p>
+            </div>
             <div class="error-message"
               [hidden] = "!nameState.errors?.minlength">
-              El nombre debe tener un mínimo de 3 caracteres
+              <p>*El nombre debe tener un mínimo de 3 caracteres</p>
             </div>
           </div>
       </div>
@@ -32,6 +33,17 @@
           placeholder="Indica el correo (es obligatorio)"
           [(ngModel)]="oInputBlog.correo"
           #correoState="ngModel">
+          <!-- Validación correo -->
+          <div class="error d-block" [hidden]="correoState.valid || correoState.untouched ">
+            <div class="error-message"
+              [hidden]="!correoState.errors?.required">
+              <p>*El correo es obligatorio</p>
+            </div>
+            <div class="error-message"
+              [hidden] = "!correoState.errors?.pattern">
+               <p>*El formato debe ser del estilo xxx@xxx.xxx</p>
+            </div>
+          </div>
       </div>
 
       <div class="form-group row ">
@@ -43,10 +55,10 @@
         placeholder="Indica la contraseña (es obligatorio)"
         [(ngModel)]="oInputBlog.pass"
         #passState="ngModel">
-        <div [hidden]="passState.valid || passState.untouched ">
+        <div class="error" [hidden]="passState.valid || passState.untouched ">
           <div class="error-message"
             [hidden]="!passState.errors?.required">
-            La contraseña es obligatoria
+            <p>*La contraseña es obligatoria</p> 
           </div>
           <div class="error-message"
             [hidden] = "!passState.errors?.pattern">
@@ -67,13 +79,14 @@
           [(ngModel)]="oInputBlog.telefono"
           #phoneState="ngModel">
       </div>
-      <div [hidden]="phoneState.valid || phoneState.untouched ">
+      <div class="error" [hidden]="phoneState.valid || phoneState.untouched ">
           <div class="error-message"
-              [hidden]="!phoneState.errors?.required">
-              El teléfono es obligatorio</div>
+            [hidden]="!phoneState.errors?.required">
+            <p>*El teléfono es obligatorio</p>
+          </div>
           <div class="error-message"
-              [hidden] = "!phoneState.errors?.pattern">
-              El teléfono debe tener 9 digitos
+            [hidden] = "!phoneState.errors?.pattern">
+            <p>*El teléfono debe tener 9 digitos</p>
           </div>
       </div>
 
@@ -87,10 +100,11 @@
         [(ngModel)]="oInputBlog.titulo"
         #tituloState="ngModel">
     </div>
-    <div [hidden]="tituloState.valid || tituloState.untouched ">
+    <div class="error" [hidden]="tituloState.valid || tituloState.untouched ">
         <div class="error-message"
           [hidden]="!tituloState.errors?.required">
-          El titulo es obligatorio</div>
+          <p>*El titulo es obligatorio</p>
+        </div>
       </div>
 
 
@@ -105,10 +119,11 @@
         #comentsState="ngModel">
         </textarea>
       </div>
-    <div [hidden]="comentsState.valid || comentsState.untouched ">
+    <div class="error" [hidden]="comentsState.valid || comentsState.untouched ">
         <div class="error-message"
-            [hidden]="!comentsState.errors?.required">
-            El campo es obligatorio</div>
+          [hidden]="!comentsState.errors?.required">
+          <p>*El campo es obligatorio</p>
+        </div>
     </div>
 
     <div class="row align-items-center">
