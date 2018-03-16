@@ -54,6 +54,20 @@ nav ul li ul li{
   font-size: 25px;
   display: block;
 }
+
+nav ul li ul li a{
+  font-size: 20px;
+background-color: ghostwhite;
+   /*  border: solid 1px black; */
+border-bottom: 1px solid black;
+border-right:1px solid black;
+border-left: 1px solid black;
+
+}
+nav ul li ul li:first-child{
+  border-top: 1px solid black;
+}
+
 @media only screen and (min-width: 575px){
   nav ul li ul li{
 
@@ -79,7 +93,7 @@ nav ul li ul li{
 }
 @media only screen and (min-width: 950px){
   ul{
-    paddi-left: 5%;
+    padding-left: 5%;
   }
 }
 @media only screen and (max-width: 1225px){
@@ -131,9 +145,8 @@ nav ul li ul li{
 
   nav ul li ul li a{
     font-size: 20px;
-    background-color: ghostwhite;
-    border: solid 1px black;
-  }
+    /* background-color: ghostwhite;
+    border: solid 1px black; */}
 
   .oculto{
     display: none;
