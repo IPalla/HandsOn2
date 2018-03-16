@@ -12,6 +12,6 @@ import { MenuComponent } from './menu/menu.component';
     RouterModule
   ],
   declarations: [MenuComponent, HeaderComponent, FooterComponent, AsideComponent],
-  exports: [MenuComponent, FooterComponent, HeaderComponent]
+  exports: [MenuComponent, FooterComponent, HeaderComponent, AsideComponent]
 })
 export class CoreModule { }
