@@ -1,13 +1,13 @@
 {
   "posts": [
     {
-      "nombre": "Juaa",
-      "correo": "nacho@gmail.com",
-      "telefono": "123123123",
-      "pass": "12345678Ab",
-      "titulo": "nueva2",
-      "descripcion": "asdfasdf231asdfqwa12312fasfd31asdfqwa1231231asdfqwa",
-      "id": 2
+      "nombre": "Angel",
+      "correo": "angel.martin@babel.es",
+      "telefono": "666666666",
+      "pass": "Angel1234",
+      "titulo": "Estación la Pinilla",
+      "descripcion": "Una mierda, mucha gente.\nNo vuelvo mas",
+      "id": 1
     }
   ]
 }
