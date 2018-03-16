@@ -5,26 +5,26 @@
       "correo": "angel.martin@babel.es",
       "telefono": "666666666",
       "pass": "Angel1234",
-      "titulo": "Estación la Pinilla",
-      "descripcion": "Una mierda, mucha gente.\nNo vuelvo mas",
+      "titulo": "Bienvenidos al blog!",
+      "descripcion": "Bienvenidos al blog de SCentral Stations.\nEn este blog podremos compartir experiencias y opiniones acerca de las estaciones, pistas...etc.\nNo olvides respetar las normas del blog: respetar a los demás y no utilizar palabras obscenas.\n\nUn saludo,\nEl equipo de SCentral Stations.",
       "id": 1
     },
     {
-      "nombre": "Juaa",
-      "correo": "nacho@gmail.com",
+      "nombre": "Esquiador",
+      "correo": "esqui@gmail.com",
       "telefono": "123123123",
       "pass": "12345678Ab",
-      "titulo": "nueva233",
-      "descripcion": "asdfasdf231asdfqwa12312fasfd31asdfqwa1231231asdfqwa",
+      "titulo": "Estación cerrada Navacerrada",
+      "descripcion": "Se ha producido un incidente en la estación de Navacerrada y se mantendrá cerrada del día 02-01-2018 al 04-01-2018.",
       "id": 2
     },
     {
-      "nombre": "aseeee",
-      "correo": "nacho@gmail.com",
+      "nombre": "Kobe",
+      "correo": "aaa@gmail.com",
       "telefono": "123123123",
       "pass": "12345678Ab",
-      "titulo": "Gasasfwef",
-      "descripcion": "eeeesafasefaseg",
+      "titulo": "Nuevo snowpark La Pinilla",
+      "descripcion": "Han abierto un nuevo snowpark en la pinilla! Nos vemos por allí!",
       "id": 3
     }
   ]
