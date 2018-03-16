@@ -12,10 +12,13 @@
         [(ngModel)]="oEntrada.titulo"
         #tituloState="ngModel">
     </div>
-    <div [hidden]="tituloState.valid || tituloState.untouched ">
+    <div class="error" [hidden]="tituloState.valid || tituloState.untouched ">
         <div class="error-message"
           [hidden]="!tituloState.errors?.required">
-          El titulo es obligatorio</div>
+          <div class="alert alert-danger">
+            <strong>Danger!</strong> El campo titulo es obligatorio.
+          </div>
+        </div>
       </div>
 
 
@@ -30,11 +33,14 @@
         #comentsState="ngModel">
         </textarea>
       </div>
-    <div [hidden]="comentsState.valid || comentsState.untouched ">
-        <div class="error-message"
+      <div class="error" [hidden]="comentsState.valid || comentsState.untouched ">
+          <div class="error-message"
             [hidden]="!comentsState.errors?.required">
-            El campo es obligatorio</div>
-    </div>
+            <div class="alert alert-danger">
+              <strong>Danger!</strong> El campo descripción es obligatorio.
+            </div>
+          </div>
+        </div>
 
     <div class="row align-items-center">
       <!--Botone "Submit | Borrar"-->
