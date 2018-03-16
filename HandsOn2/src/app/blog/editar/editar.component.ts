@@ -32,5 +32,9 @@ export class EditarComponent implements OnInit {
     this.outEditItem.emit(this.oEntrada); /*Envio del objeto modificado al padre */
     this.borrarInput();
   }
+  /* private cancelarEdit(){
+    this.outEditItem.emit(this.oEntrada);
+    this.borrarInput();
+  } */
 
 }

@@ -1,4 +1,4 @@
-.error p{
+/* .error p{
     font-size: 0.8rem;
     color: maroon;
     margin-bottom: .3rem;
@@ -6,4 +6,7 @@
     border: 1px solid black;
     text-align: center;
     width: 100%;
+} */
+.row .error{
+  margin-left: 10px;
 }

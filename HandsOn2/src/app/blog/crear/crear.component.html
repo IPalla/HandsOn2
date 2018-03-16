@@ -1,28 +1,28 @@
 <form novalidate [ngClass]="oValidado" #form1="ngForm" (ngSubmit)="enviarInput()">
   <!--Text-->
-  <fieldset>
+  <fieldset class="container-fluid">
       <legend>Nueva Entrada</legend>
 
       <div class="form-group row ">
           <!--Etiqueta / Campo "Nombre"-->
           <label for="nombre" class="col-3">Nombre Usuario</label>
-          <input type="text" class="form-control col-7"
+          <input type="text" class="form-control col-7 col-offset-2"
           name="nombre"  required minlength="3"
           placeholder="Indica el nombre (es obligatorio)"
           [(ngModel)]="oInputBlog.nombre"
           #nameState="ngModel">
-          <div class="error" [hidden]="nameState.valid || nameState.untouched ">
-            <div class="error-message"
-              [hidden]="!nameState.errors?.required">
-              <p>*El nombre es obligatorio</p>
-            </div>
-            <div class="error-message"
-              [hidden] = "!nameState.errors?.minlength">
-              <p>*El nombre debe tener un mínimo de 3 caracteres</p>
-            </div>
-          </div>
-      </div>
 
+      </div>
+      <div class="error row text-center" [hidden]="nameState.valid || nameState.untouched ">
+          <div class="error-message col-12 row text-center"
+            [hidden]="!nameState.errors?.required">
+            <p>*El nombre es obligatorio</p>
+          </div>
+          <div class="error-message row col-12 text-center"
+            [hidden] = "!nameState.errors?.minlength">
+            <p>*El nombre debe tener un mínimo de 3 caracteres</p>
+          </div>
+        </div>
 
       <div class="form-group row ">
           <!--Etiqueta / Campo "Correo"-->
@@ -58,7 +58,7 @@
         <div class="error" [hidden]="passState.valid || passState.untouched ">
           <div class="error-message"
             [hidden]="!passState.errors?.required">
-            <p>*La contraseña es obligatoria</p> 
+            <p>*La contraseña es obligatoria</p>
           </div>
           <div class="error-message"
             [hidden] = "!passState.errors?.pattern">
