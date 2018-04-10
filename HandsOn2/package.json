@@ -4,12 +4,12 @@
   "license": "MIT",
   "scripts": {
     "ng": "ng",
+    "db": "json-server data.json",
     "start": "ng serve",
     "build": "ng build --prod",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e",
-    "db": "json-server"
+    "e2e": "ng e2e"
   },
   "private": true,
   "dependencies": {
