@@ -32,3 +32,12 @@ canvas {
   top: 0;
   left: 0;
   }
+
+
+div.map {
+    width: 500px;
+    height: 380px;
+    align-content: center;
+    margin-left: auto;
+    margin-right: auto;
+}
