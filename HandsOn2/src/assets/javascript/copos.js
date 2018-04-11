@@ -1,10 +1,9 @@
-console.log('ee');
 var canvas = document.querySelector("canvas");
 var ctx = canvas.getContext("2d");
 var cw = canvas.width = window.innerWidth+window.outerWidth;
 var ch = canvas.height = window.innerHeight+window.outerHeight;
 var el_Id = null;
-var numCopos = 300;
+var numCopos = 1000;
 var coposRy = [];
 ctx.fillStyle = "white";
 
