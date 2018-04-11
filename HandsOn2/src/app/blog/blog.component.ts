@@ -23,8 +23,7 @@ export class BlogComponent implements OnInit {
   constructor(public blogservice: BlogService, private router: Router) { }
 
   ngOnInit() {
-    this.oEditar = { id: undefined, nombre: '', correo: '', telefono: '', pass: '', titulo: '', descripcion: '', latitud: undefined,
-     longitud: undefined };
+    this.oEditar = { id: undefined, nombre: '', correo: '', telefono: '', pass: '', titulo: '', descripcion: '' };
     this.sFiltrar = '';
     this.aEntradas = [];
     this.claseError = 'oculto';

@@ -8,6 +8,4 @@ export interface EntradaBlog {
     /*Datos contenido entrada*/
     titulo: string;
     descripcion: string;
-    latitud: number;
-    longitud: number;
 }
